@@ -1,0 +1,155 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="col-md-12">
+                <h4>Add Employee</h4>
+                <form role="form" id="addForm">
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <label for="firstName">
+                                    First Name
+                                </label>
+                                <input type="text" class="form-control" id="firstName" required />
+                            </div>
+                            <div class="col-sm-6">
+                                <label for="firstName">
+                                    Last Name
+                                </label>
+                                <input type="text" class="form-control" id="lastName" required />
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <label for="birthDatePicker">
+                                    Birth Date
+                                </label>
+                                <input type="date" class="form-control" id="birthDatePicker" required />
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <label for="tinNumber">
+                                    TIN Number
+                                </label>
+                                <input type="text" class="form-control" id="tinNumber" required />
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <label for="employeeType">Employee Type</label>
+                                <select class="form-control" id="employeeType">
+                                    <option value="0">Regular</option>
+                                    <option value="1">Contractual</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <label for="monthlySalary">Monthly</label>
+                                <input type="text" value="0" class="form-control text-left" id="monthlySalary" />
+                            </div>
+                            <div class="col-sm-6">
+                                <label for="dailySalary">Daily</label>
+                                <input type="text" value="0" class="form-control text-left" id="dailySalary" disabled />
+                            </div>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary" id="addEmployeeBtn">
+                        Add Employee
+                    </button>
+                </form>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="col-md-12">
+                <h4>Compute Salary</h4>
+                <form role="form" id="calculateSalary">
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <label for="employeeIdSelect">Select Employee</label>
+                                <select class="form-control" id="employeeIdSelect" required>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <label for="monthSelector">Select Month</label>
+                                <input type="month" class="form-control" id="monthSelector" required />
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <label for="absencesInput">Absences</label>
+                                <input type="number" class="form-control" min="0" max="???" step="0.10" value="0.00" id="absencesInput" required />
+                            </div>
+                        </div>
+                    </div>
+                    <button type="button" class="btn btn-primary" id="computeBtn">
+                        Compute Salary
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="row mt-2">
+        <div class="col-md-12">
+            <div class="row">
+                <div class="col-md-12">
+                    <h4>View Employee Salary</h4>
+                    <form role="form">
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <select class="form-control" id="employeeSalarySelect">
+                                    </select>
+                                </div>
+                                <div class="col-md-3">
+                                    <button type="button" class="btn btn-success btn-block" id="viewSalaryBtn">
+                                        View Salaries
+                                    </button>
+                                </div>
+                                <div class="col-sm-4">
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <table class="table table-sm" id="salariesTbl">
+                <thead>
+                    <tr>
+                        <th>
+                            Employee Type
+                        </th>
+                        <th>
+                            Work Days
+                        </th>
+                        <th>
+                            Daily Pay
+                        </th>
+                        <th>
+                            Absences
+                        </th>
+                        <th>
+                            Tax
+                        </th>
+                        <th>
+                            Total Pay
+                        </th>
+                        <th>
+                            Date
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

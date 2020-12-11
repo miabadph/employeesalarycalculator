@@ -1,0 +1,28 @@
+﻿.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 2px 2px;
+    grid-template-areas: "AddEmpContainer AddEmpContainer SalaryCalculatorContainer SalaryCalculatorContainer" "EmpSalaryContainer EmpSalaryContainer EmpSalaryContainer EmpSalaryContainer";
+}
+
+.AddEmpContainer {
+    grid-area: AddEmpContainer;
+}
+
+.SalaryCalculatorContainer {
+    grid-area: SalaryCalculatorContainer;
+}
+
+.EmpSalaryContainer {
+    grid-area: EmpSalaryContainer;
+}
+
+.formBorder {
+    border: 1px solid #C0CDCE;
+    border-radius: 13px;
+}
+
+.formPadding {
+    padding: 5pt;
+}
